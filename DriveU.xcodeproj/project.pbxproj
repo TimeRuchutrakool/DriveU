@@ -8,18 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		F4D65AA629E2AB1C002183FE /* DriveUApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D65AA529E2AB1C002183FE /* DriveUApp.swift */; };
-		F4D65AA829E2AB1C002183FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D65AA729E2AB1C002183FE /* ContentView.swift */; };
+		F4D65AA829E2AB1C002183FE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D65AA729E2AB1C002183FE /* HomeView.swift */; };
 		F4D65AAA29E2AB1D002183FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4D65AA929E2AB1D002183FE /* Assets.xcassets */; };
 		F4D65AAE29E2AB1D002183FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4D65AAD29E2AB1D002183FE /* Preview Assets.xcassets */; };
+		F4D65AB929E2B5B2002183FE /* MapRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D65AB829E2B5B2002183FE /* MapRepresentable.swift */; };
+		F4D65ABC29E2B842002183FE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D65ABB29E2B842002183FE /* LocationManager.swift */; };
+		F4D65ABE29E2BA64002183FE /* MapActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D65ABD29E2BA64002183FE /* MapActionButton.swift */; };
+		F4D65AC029E2BBC5002183FE /* StartSearchingLocationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D65ABF29E2BBC5002183FE /* StartSearchingLocationButton.swift */; };
+		F4D65AC729E2BE94002183FE /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D65AC629E2BE94002183FE /* LocationSearchView.swift */; };
+		F4D65ACA29E2C002002183FE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D65AC929E2C002002183FE /* Color.swift */; };
+		F4D65ACC29E2C321002183FE /* LocationSearchedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D65ACB29E2C321002183FE /* LocationSearchedCell.swift */; };
+		F4D65AD029E2C49D002183FE /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D65ACF29E2C49D002183FE /* MapViewState.swift */; };
+		F4D65AD229E2CAF7002183FE /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D65AD129E2CAF7002183FE /* LocationSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F4D65AA229E2AB1C002183FE /* DriveU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D65AA529E2AB1C002183FE /* DriveUApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveUApp.swift; sourceTree = "<group>"; };
-		F4D65AA729E2AB1C002183FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F4D65AA729E2AB1C002183FE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F4D65AA929E2AB1D002183FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4D65AAB29E2AB1D002183FE /* DriveU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DriveU.entitlements; sourceTree = "<group>"; };
 		F4D65AAD29E2AB1D002183FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F4D65AB829E2B5B2002183FE /* MapRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRepresentable.swift; sourceTree = "<group>"; };
+		F4D65ABB29E2B842002183FE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		F4D65ABD29E2BA64002183FE /* MapActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapActionButton.swift; sourceTree = "<group>"; };
+		F4D65ABF29E2BBC5002183FE /* StartSearchingLocationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartSearchingLocationButton.swift; sourceTree = "<group>"; };
+		F4D65AC629E2BE94002183FE /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
+		F4D65AC929E2C002002183FE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		F4D65ACB29E2C321002183FE /* LocationSearchedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchedCell.swift; sourceTree = "<group>"; };
+		F4D65ACF29E2C49D002183FE /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
+		F4D65AD129E2CAF7002183FE /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +70,10 @@
 		F4D65AA429E2AB1C002183FE /* DriveU */ = {
 			isa = PBXGroup;
 			children = (
-				F4D65AA529E2AB1C002183FE /* DriveUApp.swift */,
-				F4D65AA729E2AB1C002183FE /* ContentView.swift */,
+				F4D65AB529E2B56A002183FE /* App */,
+				F4D65AB429E2B54E002183FE /* Screen */,
+				F4D65ABA29E2B836002183FE /* Managers */,
+				F4D65AC829E2BFBC002183FE /* Extension */,
 				F4D65AA929E2AB1D002183FE /* Assets.xcassets */,
 				F4D65AAB29E2AB1D002183FE /* DriveU.entitlements */,
 				F4D65AAC29E2AB1D002183FE /* Preview Content */,
@@ -67,6 +87,93 @@
 				F4D65AAD29E2AB1D002183FE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F4D65AB429E2B54E002183FE /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				F4D65AC329E2BE70002183FE /* LocationSearch */,
+				F4D65AC229E2BE6A002183FE /* Home */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		F4D65AB529E2B56A002183FE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F4D65AA529E2AB1C002183FE /* DriveUApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F4D65AB629E2B579002183FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F4D65AA729E2AB1C002183FE /* HomeView.swift */,
+				F4D65ABD29E2BA64002183FE /* MapActionButton.swift */,
+				F4D65AB829E2B5B2002183FE /* MapRepresentable.swift */,
+				F4D65ABF29E2BBC5002183FE /* StartSearchingLocationButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F4D65AB729E2B586002183FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F4D65ABA29E2B836002183FE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F4D65ABB29E2B842002183FE /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F4D65AC229E2BE6A002183FE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F4D65AB629E2B579002183FE /* View */,
+				F4D65AB729E2B586002183FE /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F4D65AC329E2BE70002183FE /* LocationSearch */ = {
+			isa = PBXGroup;
+			children = (
+				F4D65AC429E2BE7C002183FE /* View */,
+				F4D65AC529E2BE84002183FE /* ViewModel */,
+			);
+			path = LocationSearch;
+			sourceTree = "<group>";
+		};
+		F4D65AC429E2BE7C002183FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F4D65AC629E2BE94002183FE /* LocationSearchView.swift */,
+				F4D65ACB29E2C321002183FE /* LocationSearchedCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F4D65AC529E2BE84002183FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F4D65AD129E2CAF7002183FE /* LocationSearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F4D65AC829E2BFBC002183FE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F4D65AC929E2C002002183FE /* Color.swift */,
+				F4D65ACF29E2C49D002183FE /* MapViewState.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +246,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4D65AA829E2AB1C002183FE /* ContentView.swift in Sources */,
+				F4D65AC729E2BE94002183FE /* LocationSearchView.swift in Sources */,
+				F4D65ABC29E2B842002183FE /* LocationManager.swift in Sources */,
+				F4D65AA829E2AB1C002183FE /* HomeView.swift in Sources */,
+				F4D65AD029E2C49D002183FE /* MapViewState.swift in Sources */,
 				F4D65AA629E2AB1C002183FE /* DriveUApp.swift in Sources */,
+				F4D65AD229E2CAF7002183FE /* LocationSearchViewModel.swift in Sources */,
+				F4D65AB929E2B5B2002183FE /* MapRepresentable.swift in Sources */,
+				F4D65ACA29E2C002002183FE /* Color.swift in Sources */,
+				F4D65AC029E2BBC5002183FE /* StartSearchingLocationButton.swift in Sources */,
+				F4D65ACC29E2C321002183FE /* LocationSearchedCell.swift in Sources */,
+				F4D65ABE29E2BA64002183FE /* MapActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +385,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allows to access your current location.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -307,6 +424,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allows to access your current location.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

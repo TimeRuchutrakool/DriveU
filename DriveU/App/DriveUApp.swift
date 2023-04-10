@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct DriveUApp: App {
+    @StateObject var locationSearchViewModel = LocationSearchViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView().environmentObject(locationSearchViewModel)
         }
     }
 }
