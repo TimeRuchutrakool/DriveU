@@ -9,33 +9,48 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var mapViewState: MapViewState = .noInput
+    @EnvironmentObject var locationSearchViewModel: LocationSearchViewModel
     var body: some View {
-        ZStack(alignment: .top){
+        ZStack(alignment: .bottom) {
             
-            MapRepresentable(mapViewState: $mapViewState)
-                .ignoresSafeArea()
-            
-            if mapViewState == .searchingLocation{
+            ZStack(alignment: .top){
                 
-                LocationSearchView(mapViewState: $mapViewState)
+                MapRepresentable(mapViewState: $mapViewState)
+                    .ignoresSafeArea()
                 
-            }
-            else if mapViewState == .noInput{
-                StartSearchingLocationButton()
-                    .offset(y:UIScreen.main.bounds.height*0.12)
-                    .onTapGesture {
-                        withAnimation(.spring()){
-                            mapViewState = .searchingLocation
+                
+                
+                if mapViewState == .searchingLocation{
+                    
+                    LocationSearchView(mapViewState: $mapViewState)
+                    
+                }
+                else if mapViewState == .noInput{
+                    StartSearchingLocationButton()
+                        .offset(y:UIScreen.main.bounds.height*0.12)
+                        .onTapGesture {
+                            withAnimation(.spring()){
+                                mapViewState = .searchingLocation
+                            }
                         }
-                    }
+                }
+                
+                HStack {
+                    MapActionButton(mapViewState: $mapViewState)
+                    Spacer()
+                }
+                
             }
-            
-            HStack {
-                MapActionButton(mapViewState: $mapViewState)
-                Spacer()
+            if mapViewState == .locationSelected{
+                TripRequestView()
+                    .transition(.move(edge: .bottom))
             }
-            
-        }
+        }.edgesIgnoringSafeArea(.bottom)
+            .onReceive(LocationManager.shared.$userLocation) { location in
+                if let location = location{
+                    locationSearchViewModel.userLocation = location
+                }
+            }
     }
 }
 

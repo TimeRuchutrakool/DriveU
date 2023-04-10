@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F459362629E3FE9E00974D07 /* TripRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F459362529E3FE9E00974D07 /* TripRequestView.swift */; };
+		F459362929E3FEB800974D07 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F459362829E3FEB800974D07 /* RideType.swift */; };
+		F459362B29E404BF00974D07 /* RideTypeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F459362A29E404BF00974D07 /* RideTypeCard.swift */; };
+		F459362D29E40A7400974D07 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = F459362C29E40A7400974D07 /* CornerRadius.swift */; };
+		F459362F29E423D000974D07 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F459362E29E423D000974D07 /* Double.swift */; };
 		F4D65AA629E2AB1C002183FE /* DriveUApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D65AA529E2AB1C002183FE /* DriveUApp.swift */; };
 		F4D65AA829E2AB1C002183FE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D65AA729E2AB1C002183FE /* HomeView.swift */; };
 		F4D65AAA29E2AB1D002183FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4D65AA929E2AB1D002183FE /* Assets.xcassets */; };
@@ -23,6 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F459362529E3FE9E00974D07 /* TripRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRequestView.swift; sourceTree = "<group>"; };
+		F459362829E3FEB800974D07 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
+		F459362A29E404BF00974D07 /* RideTypeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideTypeCard.swift; sourceTree = "<group>"; };
+		F459362C29E40A7400974D07 /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
+		F459362E29E423D000974D07 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		F4D65AA229E2AB1C002183FE /* DriveU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D65AA529E2AB1C002183FE /* DriveUApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveUApp.swift; sourceTree = "<group>"; };
 		F4D65AA729E2AB1C002183FE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -51,6 +61,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F459362229E3FE7B00974D07 /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				F459362329E3FE8200974D07 /* View */,
+				F459362429E3FE8900974D07 /* ViewModel */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
+		F459362329E3FE8200974D07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F459362529E3FE9E00974D07 /* TripRequestView.swift */,
+				F459362A29E404BF00974D07 /* RideTypeCard.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F459362429E3FE8900974D07 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F459362729E3FEA700974D07 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4D65ACF29E2C49D002183FE /* MapViewState.swift */,
+				F459362829E3FEB800974D07 /* RideType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F4D65A9929E2AB1C002183FE = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +114,7 @@
 		F4D65AA429E2AB1C002183FE /* DriveU */ = {
 			isa = PBXGroup;
 			children = (
+				F459362729E3FEA700974D07 /* Models */,
 				F4D65AB529E2B56A002183FE /* App */,
 				F4D65AB429E2B54E002183FE /* Screen */,
 				F4D65ABA29E2B836002183FE /* Managers */,
@@ -92,6 +137,7 @@
 		F4D65AB429E2B54E002183FE /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				F459362229E3FE7B00974D07 /* Trips */,
 				F4D65AC329E2BE70002183FE /* LocationSearch */,
 				F4D65AC229E2BE6A002183FE /* Home */,
 			);
@@ -171,7 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				F4D65AC929E2C002002183FE /* Color.swift */,
-				F4D65ACF29E2C49D002183FE /* MapViewState.swift */,
+				F459362C29E40A7400974D07 /* CornerRadius.swift */,
+				F459362E29E423D000974D07 /* Double.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -247,14 +294,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D65AC729E2BE94002183FE /* LocationSearchView.swift in Sources */,
+				F459362929E3FEB800974D07 /* RideType.swift in Sources */,
+				F459362F29E423D000974D07 /* Double.swift in Sources */,
+				F459362D29E40A7400974D07 /* CornerRadius.swift in Sources */,
 				F4D65ABC29E2B842002183FE /* LocationManager.swift in Sources */,
 				F4D65AA829E2AB1C002183FE /* HomeView.swift in Sources */,
+				F459362629E3FE9E00974D07 /* TripRequestView.swift in Sources */,
 				F4D65AD029E2C49D002183FE /* MapViewState.swift in Sources */,
 				F4D65AA629E2AB1C002183FE /* DriveUApp.swift in Sources */,
 				F4D65AD229E2CAF7002183FE /* LocationSearchViewModel.swift in Sources */,
 				F4D65AB929E2B5B2002183FE /* MapRepresentable.swift in Sources */,
 				F4D65ACA29E2C002002183FE /* Color.swift in Sources */,
 				F4D65AC029E2BBC5002183FE /* StartSearchingLocationButton.swift in Sources */,
+				F459362B29E404BF00974D07 /* RideTypeCard.swift in Sources */,
 				F4D65ACC29E2C321002183FE /* LocationSearchedCell.swift in Sources */,
 				F4D65ABE29E2BA64002183FE /* MapActionButton.swift in Sources */,
 			);

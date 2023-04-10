@@ -9,9 +9,12 @@ import SwiftUI
 
 struct MapActionButton: View {
     @Binding var mapViewState: MapViewState
+    @EnvironmentObject var locationSearchViewModel: LocationSearchViewModel
     var body: some View {
         Button {
-            actionForState(mapViewState)
+            withAnimation(.spring()){
+                actionForState(mapViewState)
+            }
         } label: {
             RoundedRectangle(cornerRadius:10)
                 .fill(Color.white)
@@ -27,7 +30,7 @@ struct MapActionButton: View {
 
     }
     func actionForState(_ state: MapViewState){
-        withAnimation(.spring()){
+        
             switch state {
             case .noInput:
                 break
@@ -35,8 +38,9 @@ struct MapActionButton: View {
                 mapViewState = .noInput
             case .locationSelected:
                 mapViewState = .noInput
+                locationSearchViewModel.selectedLocation = nil
             }
-        }
+        
     }
     func imageForState(_ state: MapViewState) -> String{
         switch state {
