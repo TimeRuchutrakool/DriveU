@@ -11,4 +11,8 @@ enum MapViewState{
     case noInput
     case searchingLocation
     case locationSelected
+    case polylineAdded
+    case tripRequesting
+    case tripAccepted
+    case driverReject
 }

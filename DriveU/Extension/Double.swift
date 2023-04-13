@@ -18,7 +18,7 @@ extension Double{
     }
     
     func toCurrency() -> String{
-        return "B\(currencyFormatter.string(from:self as NSNumber) ?? "")"
+        return "\(currencyFormatter.string(from:self as NSNumber) ?? "") B"
     }
     
 }

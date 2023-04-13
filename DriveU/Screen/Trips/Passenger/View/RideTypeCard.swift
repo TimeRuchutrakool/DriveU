@@ -9,12 +9,13 @@ import SwiftUI
 
 struct RideTypeCard: View {
     let type: RideType
-    @EnvironmentObject var locationSearchViewModel: LocationSearchViewModel
+    @Binding var selectedRideType: RideType
+    @EnvironmentObject var homeViewModel: HomeViewModel
     var body: some View {
         
         RoundedRectangle(cornerRadius: 16)
-            .fill(Color.theme.secondaryBackGroundColor)
-            .frame(width: UIScreen.main.bounds.width*0.4,height: UIScreen.main.bounds.width*0.55)
+            .fill(selectedRideType == type ? Color.blue : Color.theme.secondaryBackGroundColor)
+            .frame(width: UIScreen.main.bounds.width*0.45,height: UIScreen.main.bounds.width*0.55)
             .overlay(
                 VStack {
                     
@@ -27,15 +28,16 @@ struct RideTypeCard: View {
                         VStack(alignment:.leading,spacing: 5) {
                             Text(type.title)
                                 .fontWeight(.semibold)
-                                .font(.title3)
+                                .font(.title2)
+                                .foregroundColor(selectedRideType == type ? Color.white : Color.theme.primaryTextColor)
                             Text(type.subtitle)
                                 .fontWeight(.semibold)
-                                .font(.footnote)
-                                .foregroundColor(.gray)
-                            Text(locationSearchViewModel.computeRidePrice(type: type).toCurrency())
-                                .fontWeight(.semibold)
                                 .font(.title3)
-                                .opacity(0.6)
+                                .foregroundColor(selectedRideType == type ? Color.white : .gray)
+                            Text(homeViewModel.computeRidePrice(type: type).toCurrency())
+                                .fontWeight(.semibold)
+                                .font(.title2)
+                                .foregroundColor(selectedRideType == type ? Color.white : Color.theme.primaryTextColor)
                         }
                         Spacer()
                     }
@@ -43,7 +45,7 @@ struct RideTypeCard: View {
                     .padding(.bottom)
                     
                     
-                }
+                }.scaleEffect(selectedRideType == type ? 1.0 : 0.8)
             )
         
     }
@@ -51,8 +53,8 @@ struct RideTypeCard: View {
 
 struct RideTypeCard_Previews: PreviewProvider {
     static var previews: some View {
-        RideTypeCard(type: .regular)
-            .environmentObject(LocationSearchViewModel())
+        RideTypeCard(type: .regular, selectedRideType: .constant(.regular))
+            .environmentObject(HomeViewModel())
             .previewLayout(.sizeThatFits)
     }
 }

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TripRequestView: View {
+    @EnvironmentObject var homeViewModel: HomeViewModel
+    @State private var selectedRideType: RideType = .regular
+    @Binding var mapViewState: MapViewState
     var body: some View {
         VStack{
             
@@ -35,16 +38,18 @@ struct TripRequestView: View {
                     HStack{
                         Text("Current Location")
                         Spacer()
-                        Text("10:20 AM")
+                        Text(homeViewModel.pickUpTime ?? "")
                     }
                     .foregroundColor(.gray)
                     .font(.subheadline)
-                        .fontWeight(.semibold)
-                        .padding(.bottom)
+                    .fontWeight(.semibold)
+                    .padding(.bottom)
                     HStack{
-                        Text("Destination Location")
+                        if let location = homeViewModel.selectedLocation{
+                            Text(location.title)
+                        }
                         Spacer()
-                        Text("10:20 AM")
+                        Text(homeViewModel.dropOffTime ?? "")
                     }.foregroundColor(Color.theme.primaryTextColor)
                         .font(.subheadline)
                         .fontWeight(.semibold)
@@ -62,7 +67,12 @@ struct TripRequestView: View {
                 ScrollView(.horizontal,showsIndicators: false) {
                     HStack{
                         ForEach(RideType.allCases) { type in
-                            RideTypeCard(type: type)
+                            RideTypeCard(type: type, selectedRideType: $selectedRideType)
+                                .onTapGesture {
+                                    withAnimation(.spring()){
+                                        selectedRideType = type
+                                    }
+                                }
                         }
                     }
                 }
@@ -85,7 +95,7 @@ struct TripRequestView: View {
                             .foregroundColor(Color.theme.primaryTextColor)
                             .font(.subheadline)
                             .fontWeight(.semibold)
-                            Spacer()
+                        Spacer()
                         Image(systemName: "chevron.right")
                             .foregroundColor(Color.theme.primaryTextColor)
                             .padding()
@@ -93,26 +103,33 @@ struct TripRequestView: View {
                 )
             
             //MARK: - Confirm Ride Button
-            RoundedRectangle(cornerRadius: 16)
-                .fill(Color.blue)
-                .frame(width: UIScreen.main.bounds.width*0.9,height: 50)
-                .overlay(
-                    Text("Confirm Ride".uppercased())
-                        .foregroundColor(Color.white)
-                        .font(.title3)
-                        .fontWeight(.bold)
-                )
-          Spacer()
+            Button {
+                homeViewModel.requestTrip()
+                mapViewState = .tripRequesting
+            } label: {
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(Color.blue)
+                    .frame(width: UIScreen.main.bounds.width*0.9,height: 50)
+                    .overlay(
+                        Text("Confirm Ride".uppercased())
+                            .foregroundColor(Color.white)
+                            .font(.title3)
+                            .fontWeight(.bold)
+                    )
+                
+            }
+            
+            Spacer()
                 .frame(height: 35)
         }
         .background(Color.theme.backGroundColor)
         .cornerRadius(20, corners: [.topLeft,.topRight])
- 
+        
     }
 }
 
 struct TripRequestView_Previews: PreviewProvider {
     static var previews: some View {
-        TripRequestView().environmentObject(LocationSearchViewModel())
+        TripRequestView(mapViewState: .constant(.locationSelected)).environmentObject(HomeViewModel())
     }
 }

@@ -9,7 +9,9 @@ import SwiftUI
 
 struct MapActionButton: View {
     @Binding var mapViewState: MapViewState
-    @EnvironmentObject var locationSearchViewModel: LocationSearchViewModel
+    @EnvironmentObject var homeViewModel: HomeViewModel
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
+    @Binding var sidebarToggling: Bool
     var body: some View {
         Button {
             withAnimation(.spring()){
@@ -30,33 +32,35 @@ struct MapActionButton: View {
 
     }
     func actionForState(_ state: MapViewState){
-        
+        withAnimation(.spring()){
             switch state {
             case .noInput:
-                break
+                sidebarToggling.toggle()
             case .searchingLocation:
                 mapViewState = .noInput
-            case .locationSelected:
+            case .locationSelected,.polylineAdded,.driverReject:
                 mapViewState = .noInput
-                locationSearchViewModel.selectedLocation = nil
+                homeViewModel.selectedLocation = nil
+            case .tripRequesting,.tripAccepted:
+                break
             }
-        
+        }
     }
     func imageForState(_ state: MapViewState) -> String{
         switch state {
         case .noInput:
             return "line.3.horizontal"
-        case .searchingLocation:
+        case .searchingLocation,.locationSelected,.polylineAdded,.driverReject:
             return "arrow.left"
-        case .locationSelected:
-            return "arrow.left"
+        case .tripRequesting,.tripAccepted:
+            return ""
         }
     }
 }
 
 struct MapActionButton_Previews: PreviewProvider {
     static var previews: some View {
-        MapActionButton(mapViewState: .constant(.noInput)).previewLayout(.sizeThatFits)
+        MapActionButton(mapViewState: .constant(.noInput), sidebarToggling: .constant(false)).previewLayout(.sizeThatFits)
             .background(Color.black)
     }
 }

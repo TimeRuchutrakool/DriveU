@@ -9,6 +9,7 @@ import Foundation
 import CoreLocation
 
 class LocationManager: NSObject,ObservableObject{
+    
     private let locationManager = CLLocationManager()
     
     static let shared = LocationManager()
