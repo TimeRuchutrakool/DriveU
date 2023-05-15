@@ -80,6 +80,6 @@ struct SidebarView: View {
 
 struct SidebarView_Previews: PreviewProvider {
     static var previews: some View {
-        SidebarView(user: User(uid: "", username: "", email: "",accountType: .passenger,coordinate: GeoPoint(latitude: 0, longitude: 0)))
+        SidebarView(user: User(username: "", email: "", uid: "",accountType: .passenger,coordinate: GeoPoint(latitude: 0, longitude: 0)))
     }
 }

@@ -52,9 +52,9 @@ class AuthenticationViewModel: ObservableObject{
             }
             guard let firebaseUser = result?.user else {return}
             let user = User(
-                uid: firebaseUser.uid,
-                username: username,
-                email: email,
+                username: firebaseUser.uid,
+                email: username,
+                uid: email,
                 accountType: .passenger,
                 coordinate: GeoPoint(latitude: location.latitude, longitude: location.longitude)
             )

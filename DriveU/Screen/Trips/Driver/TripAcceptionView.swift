@@ -33,7 +33,7 @@ struct TripAcceptionView: View {
                 .padding()
             //MARK: - Header
             HStack{
-                Text("Would you like to pick up this passenger ?")
+                Text("Pick up this passenger?")
                     .multilineTextAlignment(.leading)
                     .lineLimit(2)
                     .foregroundColor(Color.theme.primaryTextColor)

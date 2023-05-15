@@ -26,10 +26,10 @@ struct RideTypeCard: View {
 
                     HStack {
                         VStack(alignment:.leading,spacing: 5) {
-                            Text(type.title)
-                                .fontWeight(.semibold)
-                                .font(.title2)
-                                .foregroundColor(selectedRideType == type ? Color.white : Color.theme.primaryTextColor)
+//                            Text(type.title)
+//                                .fontWeight(.semibold)
+//                                .font(.title2)
+//                                .foregroundColor(selectedRideType == type ? Color.white : Color.theme.primaryTextColor)
                             Text(type.subtitle)
                                 .fontWeight(.semibold)
                                 .font(.title3)

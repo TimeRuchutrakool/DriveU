@@ -70,7 +70,7 @@ class HomeViewModel: NSObject,ObservableObject{
     //MARK: - Passenger API
     
     func fetchDriver(){
-        Firestore.firestore().collection("users").whereField("accountType", isEqualTo: AccounType.driver.rawValue).getDocuments { snapshot, error in
+        Firestore.firestore().collection("users").whereField("accountType", isEqualTo: AccountType.driver.rawValue).getDocuments { snapshot, error in
             if let error = error{
                 print(error)
                 return

@@ -14,7 +14,7 @@ struct HomeView: View {
     @EnvironmentObject var homeViewModel: HomeViewModel
     var body: some View {
         
-        if $authViewModel.userSession == nil{
+        if authViewModel.userSession == nil{
             LogInView()
         }
         else if let user = authViewModel.currentUser{
